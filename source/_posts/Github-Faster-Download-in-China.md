@@ -6,7 +6,7 @@ tags: git
 method about how to download faster on Github.
 <!--more-->
 
-## gihub 访问
+## gihub host 直接访问
    在中国访问github非常慢。通过在 www.ipaddress.com 中查询 github.com 的IP地址。修改/ect/hosts下的host映射，省去DNS服务器步骤。
 
 ## git clone 下载
@@ -31,3 +31,16 @@ git clone https://github.com.cnpmjs.org/repository
 git clone --depth=1 https://github.com/repository
 ```
 如果需要最近两次commit来开发，可以写`--depth=2`，以此类推
+
+## 使用sock5
+如果有代理服务的话，可以让git bash走代理。
+### 设置
+```
+git config --global http.proxy 'socks5://127.0.0.1:1080'
+git config --global https.proxy 'socks5://127.0.0.1:1080'
+```
+### 取消
+```
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+```

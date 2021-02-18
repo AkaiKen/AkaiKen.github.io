@@ -4,7 +4,7 @@ menu:
   Archives: /archives
   Gallery: /gallery
   About: /about
-rss: /atom.xml
+# rss: /atom.xml
 
 
 # Miscellaneous
@@ -15,7 +15,7 @@ brand: /images/hexo.svg
 # Because I put videos in multiple formats on the same path, I just labeled the path here.
 ocean:
   overlay: true
-  path: #/images/ocean/
+  path: /images/ocean/
   brand: /images/hexo-inverted.svg
 
 # Content

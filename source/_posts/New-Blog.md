@@ -1,5 +1,5 @@
 ---
-title: New-Blog
+title: New Blog
 date: 2021-02-12 10:00:00
 tags: blog
 ---
