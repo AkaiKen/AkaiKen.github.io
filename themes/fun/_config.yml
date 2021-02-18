@@ -1,0 +1,36 @@
+
+menu:
+  - title: 首页
+    url: /
+  - title: 时间轴
+    url: /time.html
+
+
+favicon: /images/favicon.png
+
+recommend:
+  size: 8
+
+prefile:
+  excerpt: |
+    <p>网名：一笑奈何。</p>
+    <p>职业：全栈软件工程师、Java劝退师</p>
+    <p>Email：homeanter@163.com</p>
+  wechat: /images/wechat.png
+copyright: |
+  Design by
+  <a href='https://tianhui.xin' target='_blank'>怪咖晨</a>
+  京ICP备16046477号-1
+comment:
+  gitalk:
+    enable: true
+    owner: you github repository owner
+    repo: you github repository
+    clientID: you github Client ID
+    clientSecret: you github Client Secret
+  gitment:
+    enable: false
+    owner: you github repository owner
+    repo: you github repository
+    clientID: you github Client ID
+    clientSecret: you github Client Secret
