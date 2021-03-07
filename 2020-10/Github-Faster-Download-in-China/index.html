@@ -69,7 +69,7 @@
       <p>method about how to download faster on Github.</p>
 <a id="more"></a>
 
-<h2 id="gihub-访问"><a href="#gihub-访问" class="headerlink" title="gihub 访问"></a>gihub 访问</h2><p>   在中国访问github非常慢。通过在 <a target="_blank" rel="noopener" href="http://www.ipaddress.com/">www.ipaddress.com</a> 中查询 github.com 的IP地址。修改/ect/hosts下的host映射，省去DNS服务器步骤。</p>
+<h2 id="gihub-host-直接访问"><a href="#gihub-host-直接访问" class="headerlink" title="gihub host 直接访问"></a>gihub host 直接访问</h2><p>   在中国访问github非常慢。通过在 <a target="_blank" rel="noopener" href="http://www.ipaddress.com/">www.ipaddress.com</a> 中查询 github.com 的IP地址。修改/ect/hosts下的host映射，省去DNS服务器步骤。</p>
 <h2 id="git-clone-下载"><a href="#git-clone-下载" class="headerlink" title="git clone 下载"></a>git clone 下载</h2><h3 id="下载加速"><a href="#下载加速" class="headerlink" title="下载加速"></a>下载加速</h3><p>   虽然上述修改host对git clone也有效果，但充其量只是从2KB/s上升至20KB/s没有质的提升。更好的方法是通过第三方的镜像网站。这里使用github.com.cnpmjs.org的镜像网站。<br>例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;repository</span><br></pre></td></tr></table></figure>
 <p>改成：</p>
@@ -82,7 +82,9 @@
 <p>   由此看出如果commit比较多所需要的下在时间也会变长。我们通过加入–depth=1来执行浅拷贝：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone --depth&#x3D;1 https:&#x2F;&#x2F;github.com&#x2F;repository</span><br></pre></td></tr></table></figure>
 <p>如果需要最近两次commit来开发，可以写<code>--depth=2</code>，以此类推</p>
-
+<h2 id="使用sock5"><a href="#使用sock5" class="headerlink" title="使用sock5"></a>使用sock5</h2><p>如果有代理服务的话，可以让git bash走代理。</p>
+<h3 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy &#39;socks5:&#x2F;&#x2F;127.0.0.1:1080&#39;</span><br><span class="line">git config --global https.proxy &#39;socks5:&#x2F;&#x2F;127.0.0.1:1080&#39;</span><br></pre></td></tr></table></figure>
+<h3 id="取消"><a href="#取消" class="headerlink" title="取消"></a>取消</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br><span class="line">git config --global --unset https.proxy</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
@@ -104,13 +106,13 @@
     <strong class="article-nav-caption">Newer</strong>
     <div class="article-nav-title">
       
-      New-Blog
+      New Blog
       
     </div>
   </a>
   
   
-  <a href="/1899-11/hello-world/" class="article-nav-link">
+  <a href="/2020-10/hello-world/" class="article-nav-link">
     <strong class="article-nav-caption">Older</strong>
     <div class="article-nav-title">Hello World</div>
   </a>
